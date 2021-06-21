@@ -236,11 +236,7 @@ class MovieMaster extends Component {
                         onClick={() => this.setRating(!this.state.showRating)}
                       >
                         <span>
-                          <FontAwesomeIcon
-                            icon={faStar}
-                            // className="empty-icon"
-                            size="xs"
-                          />
+                          <FontAwesomeIcon icon={faStar} size="xs" />
                         </span>
                         <p
                           style={{

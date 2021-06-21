@@ -204,16 +204,16 @@ class Header extends Component {
         width: "450%",
         height: "2rem",
         border: "none",
-        borderRadius: ".2rem",
         padding: ".5rem",
+        outline: "1px solid #fff",
       },
       inputFocused: {
         // border: "1px solid #87cefa",
       },
       suggestionsContainer: {
-        // border: "1px solid #fff",
+        border: "1px solid #fff",
         width: "450%",
-        // position: "fixed",
+        position: "absolute",
       },
       suggestionsList: {
         listStyle: "none",

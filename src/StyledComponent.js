@@ -13,9 +13,11 @@ export const Item = styled.div`
 
 export const Button = styled.button`
   color: #fff;
+  background-color: #0e63be;
   font-size: 1em;
+  font-weight: bold;
   padding: 0.25em 1em;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   height: 50px;
   width: 50px;
   border-radius: 50%;

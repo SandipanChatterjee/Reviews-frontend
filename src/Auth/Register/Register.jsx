@@ -126,12 +126,8 @@ export class Register extends Component {
   }
   render() {
     const { errorMessage, showErrorModal } = this.state;
-    const {
-      loading,
-      showRegisterModal,
-      registerModalHandler,
-      token,
-    } = this.props;
+    const { loading, showRegisterModal, registerModalHandler, token } =
+      this.props;
 
     if (this.errorMsg !== null) {
       console.log("PRINT1");
@@ -168,6 +164,16 @@ export class Register extends Component {
         width: "50%",
         height: "40rem",
         borderRadius: "1rem",
+        backgroundColor: "#232b2b",
+      },
+      overlay: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        opacity: 1,
+        transition: "opacity 2000ms ease-in-out",
       },
     };
     return (
@@ -178,6 +184,7 @@ export class Register extends Component {
           style={customStyles}
           contentLabel="Example Modal"
           ariaHideApp={false}
+          closeTimeoutMS={2000}
         >
           <Formik
             initialValues={initialValues}
@@ -187,8 +194,13 @@ export class Register extends Component {
           >
             {({ values, handleChange, setFieldValue, errors, touched }) => (
               <Form>
-                <div className="auth-heading">
-                  <span>Register</span>
+                <div
+                  className="auth-heading"
+                  style={{ backgroundColor: "#232b2b" }}
+                >
+                  <span style={{ backgroundColor: "#232b2b", color: "#fff" }}>
+                    Register
+                  </span>
                 </div>
                 <div className="field-container">
                   <Field

@@ -1,21 +1,27 @@
 .field-container {
   height: auto;
   width: 100%;
-  background-color: #fff;
+  background-color: #232b2b;
   border: none;
+  /* border: 1px solid #fff; */
+}
+.field-container .heading {
+  background-color: #232b2b;
+  /* color: #fff; */
 }
 
 .field-container .field {
   height: 3rem;
   width: 100%;
-  background-color: #fff;
+  background-color: #232b2b;
   margin: 0.5rem 0.2rem;
   border: 1px solid #808080;
   padding: 0.2rem;
+  color: #fff;
 }
 
 .field-container .error {
-  background-color: #fff;
+  background-color: #232b2b;
   color: red;
   font-size: small;
   margin-left: 0.2rem;
@@ -28,9 +34,14 @@
 .field-container .submit {
   width: 10%;
   height: 2.5rem;
-  background-color: cornflowerblue;
+  background-color: #0e63be;
   padding: 0.7rem;
   border-radius: 0.2rem;
   cursor: pointer;
   border: none;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1;
 }

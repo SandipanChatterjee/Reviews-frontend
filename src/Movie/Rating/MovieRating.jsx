@@ -46,6 +46,7 @@ class MovieRating extends Component {
                 size="xs"
                 onMouseEnter={() => this.setState({ hover: ratingValue })}
                 onMouseLeave={() => this.setState({ hover: null })}
+                style={{ cursor: "pointer" }}
                 color={
                   ratingValue <= (this.state.hover || this.state.rating)
                     ? "#f5c593"

@@ -85,6 +85,16 @@ export class Login extends Component {
         height: "20rem",
         borderRadius: "1rem",
         transition: "all .6s ease-in-out 0s",
+        backgroundColor: "#232b2b",
+      },
+      overlay: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        opacity: 1,
+        transition: "opacity 2000ms ease-in-out",
       },
     };
 
@@ -106,8 +116,13 @@ export class Login extends Component {
           >
             {({ values, handleChange, setFieldValue, errors, touched }) => (
               <Form>
-                <div className="auth-heading">
-                  <span>Login</span>
+                <div
+                  className="auth-heading"
+                  style={{ backgroundColor: "#232b2b" }}
+                >
+                  <span style={{ backgroundColor: "#232b2b", color: "#fff" }}>
+                    Login
+                  </span>
                 </div>
 
                 <div className="field-container">
