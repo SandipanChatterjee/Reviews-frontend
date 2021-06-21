@@ -214,6 +214,7 @@ class Header extends Component {
         border: "1px solid #fff",
         width: "450%",
         position: "absolute",
+        zIndex: "99",
       },
       suggestionsList: {
         listStyle: "none",
