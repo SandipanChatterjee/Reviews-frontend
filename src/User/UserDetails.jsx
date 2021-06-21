@@ -57,11 +57,13 @@ class UserDetails extends Component {
                 padding: ".2rem",
                 cursor: "pointer",
                 zIndex: 2,
+                position: "relative",
               }
             : {
                 padding: ".2rem",
                 cursor: "pointer",
                 zIndex: 2,
+                position: "relative",
               }
         }
         onClick={this.menuHandler}
@@ -75,7 +77,7 @@ class UserDetails extends Component {
             onClick={this.menuHandler}
           />
         </span>
-        <div>
+        <div style={{ position: "absolute" }}>
           {showMenu
             ? items.map((el, index) => {
                 return (

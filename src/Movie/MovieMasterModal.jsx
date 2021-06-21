@@ -12,6 +12,16 @@ class MovieMasterModal extends Component {
         width: "50%",
         height: "10rem",
         borderRadius: "1rem",
+        backgroundColor: "#232b2b",
+      },
+      overlay: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        opacity: 1,
+        transition: "opacity 2000ms ease-in-out",
       },
     };
     return (
@@ -28,13 +38,13 @@ class MovieMasterModal extends Component {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#fff",
+              backgroundColor: "#232b2b",
             }}
           >
             <span
               style={{
-                backgroundColor: "#fff",
-                color: "#000",
+                backgroundColor: "#232b2b",
+                color: "#fff",
                 fontSize: "1.5rem",
               }}
             >
