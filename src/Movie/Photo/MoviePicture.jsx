@@ -6,13 +6,22 @@ import "./MoviePicture.css";
 
 class MoviePicture extends Component {
   myArrow = ({ type, onClick, isEdge }) => {
-    // console.log("PrevArrow####", type);
-    const pointer = type === consts.PREV ? "<" : ">";
+    console.log("PrevArrow####", consts, isEdge);
+    let pointer = type === consts.PREV ? "<" : ">";
+    let cursor = "pointer";
+    if (pointer == "<" && isEdge) {
+      pointer = null;
+      cursor = "not-allowed";
+    }
+    if (pointer == ">" && isEdge) {
+      pointer = null;
+      cursor = "not-allowed";
+    }
     return (
       <Button
         onClick={onClick}
         disabled={isEdge}
-        style={{ marginTop: "4rem", cursor: "pointer" }}
+        style={{ marginTop: "4rem", cursor: cursor }}
       >
         {pointer}
       </Button>

@@ -303,7 +303,13 @@ class MovieMaster extends Component {
                 <LoadingSpinner />
               )}
             </div>
+
             <div className="movie-picture">
+              <div>
+                <p style={{ fontSize: "1.3rem", marginBottom: "1rem" }}>
+                  Photos:
+                </p>
+              </div>
               <MoviePicture photos={movie.photos} />
             </div>
           </div>
