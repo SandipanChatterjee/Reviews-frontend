@@ -1,5 +1,5 @@
 Movie review application
 
-Live : https://fervent-poitras-0dd627.netlify.app
+Live : https://reviewsdemo123.netlify.app
 
 ![](Dashboard.JPG "Dashboard")
