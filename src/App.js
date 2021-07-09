@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { RootRoutes } from "./Routes/index";
-import Header from "./Dashboard/Header";
+import Header from "./Dashboard/Header.jsx";
 
 class App extends React.Component {
   componentDidMount() {

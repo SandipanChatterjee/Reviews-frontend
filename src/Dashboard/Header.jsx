@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import UserDetails from "../User/UserDetails";
+import UserDetails from "../User/UserDetails.jsx";
 import "./Dashboard.css";
 import ForgotPassword from "../Auth/ForgotPassword/ForgotPassword";
 import { logout } from "../store/actions/auth";
