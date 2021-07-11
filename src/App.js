@@ -5,6 +5,11 @@ import Header from "./Dashboard/Header";
 
 class App extends React.Component {
   componentDidMount() {
+    if (process.env.NODE_ENV == "production") {
+      console.log = function () {};
+      console.warn = function () {};
+      console.error = function () {};
+    }
     console.log("COMPONENT -- AA");
   }
   render() {
