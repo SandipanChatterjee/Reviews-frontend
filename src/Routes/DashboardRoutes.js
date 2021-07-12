@@ -1,10 +1,10 @@
-import loadable from "@loadable/component";
+// import loadable from "@loadable/component";
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import ResetPassword from "../Auth/ResetPassword/ResetPassword";
 import { LoadingSpinner } from "../utils";
-import WatchList from "../User/WatchList";
-import Rating from "../User/Rating";
+// import WatchList from "../User/WatchList";
+// import Rating from "../User/Rating";
 import { PrivateRoutes } from "../PrivateRoutes";
 const fallbackComponent = () => {
   return (
@@ -19,19 +19,22 @@ const fallbackComponent = () => {
     </span>
   );
 };
-const Dashboard = loadable(() => import("../Dashboard/Dashboard"), {
-  fallback: fallbackComponent,
-});
+
+const WatchList = React.lazy(() => import("../User/WatchList"));
+const Rating = React.lazy(() => import("../User/Rating"));
+const Dashboard = React.lazy(() => import("../Dashboard/Dashboard"));
 
 export const DashboardRoutes = () => (
-  <Switch>
-    <PrivateRoutes path="/home/watchlist" exact component={WatchList} />
-    <PrivateRoutes path="/home/rating" exact component={Rating} />
-    <Route
-      path="/api/v1/auth/resetpassword/:resettoken"
-      component={ResetPassword}
-    />
-    <Route path="/home" exact component={Dashboard} />
-    <Redirect from="/" to="/home" />
-  </Switch>
+  <React.Suspense fallback={fallbackComponent}>
+    <Switch>
+      <PrivateRoutes path="/home/watchlist" exact component={WatchList} />
+      <PrivateRoutes path="/home/rating" exact component={Rating} />
+      <Route path="/home" exact component={Dashboard} />
+      <Route
+        path="/api/v1/auth/resetpassword/:resettoken"
+        component={ResetPassword}
+      />
+      <Redirect from="/" to="/home" />
+    </Switch>
+  </React.Suspense>
 );
