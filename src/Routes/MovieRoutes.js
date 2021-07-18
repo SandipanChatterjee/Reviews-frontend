@@ -16,6 +16,7 @@ const fallbackComponent = () => {
   );
 };
 const MovieMaster = React.lazy(() => import("../Movie/MovieMaster"));
+
 export const MovieRoutes = () => {
   return (
     <React.Suspense fallback={fallbackComponent}>

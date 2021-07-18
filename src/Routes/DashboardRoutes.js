@@ -1,11 +1,8 @@
-// import loadable from "@loadable/component";
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import ResetPassword from "../Auth/ResetPassword/ResetPassword";
-import { LoadingSpinner } from "../utils";
-// import WatchList from "../User/WatchList";
-// import Rating from "../User/Rating";
 import { PrivateRoutes } from "../PrivateRoutes";
+import { LoadingSpinner } from "../utils";
 const fallbackComponent = () => {
   return (
     <span
